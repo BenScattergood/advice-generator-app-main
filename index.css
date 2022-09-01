@@ -1,0 +1,143 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Light Cyan: hsl(193, 38%, 86%)
+- Neon Green: hsl(150, 100%, 66%)
+
+### Neutral
+
+- Grayish Blue: hsl(217, 19%, 38%)
+- Dark Grayish Blue: hsl(217, 19%, 24%)
+- Dark Blue: hsl(218, 23%, 16%)
+
+## Typography
+
+### Body Copy
+
+- Font size (quote): 28px
+
+### Font
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 800 */
+
+
+:root {
+
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    background-color: var(--dark-grayish-blue);
+    margin: 0 1rem 0 1rem;
+    max-width: 375px;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 25px 0 rgba(9, 9, 38, 0.25);
+    
+}
+
+
+
+.content-wrapper {
+    margin: 1rem 1rem 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--neon-green);
+    letter-spacing: 0.3rem;
+    font-weight: 800;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--light-cyan);
+    margin-top: 0.5rem;
+}
+
+.dice {
+    margin: 1rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -4.7rem;
+    z-index: 1;
+    width: 1.5rem;
+}
+
+.dice:hover {
+    cursor: pointer;
+}
+
+.dice-holder {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -6rem;
+    transition: 300ms;
+}
+
+.dice-holder:hover {
+    cursor: pointer;
+}
+
+.grow {
+    box-shadow: 0 0 25px 10px rgba(60, 230, 91, 0.25);
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+    transform: rotate(180deg);
+    transition-property: all;
+}
+
+
+@media only screen and (min-width:768px) {
+    main {
+        max-width: 500px;
+        transform: scale(1);
+        transition: 300ms;
+    }
+
+    main:hover {
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+}
+
+
+
